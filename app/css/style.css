@@ -25,61 +25,79 @@ body {
   color: #fff;
   text-decoration: none;
 }
-.header {
+.header,
+.footer {
   padding: 60px 0;
 }
-.header .desc {
+.header .desc,
+.footer .desc {
   padding-left: 30px;
 }
-.header .desc .desc__title {
+.header .desc .desc__title,
+.footer .desc .desc__title {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "GothamProBold";
 }
-.header .desc .desc__text {
+.header .desc .desc__text,
+.footer .desc .desc__text {
   font-family: "GothamProLight";
 }
-.header .desc .header__menu {
+.header .desc .header__menu,
+.footer .desc .header__menu {
   display: flex;
 }
-.header .desc .header__menu .menu__item {
+.header .desc .header__menu .menu__item,
+.footer .desc .header__menu .menu__item {
   padding-right: 40px;
 }
-.header .desc .header__menu .menu__item .menu__link {
+.header .desc .header__menu .menu__item .menu__link,
+.footer .desc .header__menu .menu__item .menu__link {
   display: block;
   border-bottom: 1px solid #d2d7d9;
   color: #000;
   transition: .2s;
 }
-.header .desc .header__menu .menu__item .menu__link:hover {
+.header .desc .header__menu .menu__item .menu__link:hover,
+.footer .desc .header__menu .menu__item .menu__link:hover {
   font-weight: bold;
   text-decoration: none;
 }
-.header .phone {
+.header .phone,
+.footer .phone {
   margin-bottom: 18px;
   text-align: right;
 }
-.header .phone a {
+.header .phone a,
+.footer .phone a {
   font-size: 24px;
   color: #000;
   text-decoration: none;
   font-family: "GothamProLight";
 }
-.header .button {
+.header .button,
+.footer .button {
   margin-bottom: 33px;
   text-align: center;
   border-bottom: 2px solid #ffad1d;
   border-radius: 3px;
   background-image: repeating-linear-gradient(-60deg, #ffcc1d, #ffcc1d 10px, #ffd851 10px, #ffd851 20px);
 }
-.header .button .button__link {
+.header .button .button__link,
+.footer .button .button__link {
   font-family: "GothamProBold";
   color: #000;
   display: block;
   padding: 20px 23px;
   font-size: 16px;
 }
-.header .search form input {
+.header .button .button__link:hover,
+.footer .button .button__link:hover {
+  text-decoration: none;
+  background-image: repeating-linear-gradient(-60deg, #ffcc1d, #ffcc1d 8px, #ffd851 8px, #ffd851 18px);
+}
+.header .search form input,
+.footer .search form input {
   width: 100%;
   padding: 10px 15px;
   outline: none;
@@ -87,6 +105,7 @@ body {
   border-radius: 2px;
 }
 .banner {
+  margin-bottom: 75px;
   padding: 60px 0;
   min-height: 375px;
   background: url('../img/banner.jpg');
@@ -112,6 +131,7 @@ body {
   font-size: 24px;
   font-family: "GothamProRegular";
   position: relative;
+  margin-bottom: 20px;
 }
 .title:after {
   display: block;
@@ -131,9 +151,34 @@ body {
   left: 64px;
   top: 41px;
 }
-.selection input {
+.selection {
+  margin-bottom: 75px;
+}
+.selection select {
   outline: none;
   width: 100%;
   border: 2px solid #d2d7d9;
   border-radius: 2px;
+  padding: 12px;
+}
+.selection input {
+  width: 100%;
+  border: none;
+  background: #ffcc1d;
+  padding: 15px 0;
+  font-family: "GothamProBold";
+}
+.help {
+  margin-bottom: 75px;
+}
+.help .help__text {
+  font-family: "GothamProBold";
+}
+.help img {
+  width: 100%;
+  height: auto;
+}
+.catalog1,
+.catalog2 {
+  margin-bottom: 75px;
 }

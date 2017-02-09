@@ -27,7 +27,7 @@ body {
 	}
 }
 
-.header {
+.header, .footer {
 	padding: 60px 0;
 	.desc {
 		padding-left: 30px;
@@ -85,6 +85,16 @@ body {
 			display: block;
 			padding: 20px 23px;
 			font-size: 16px;
+			&:hover {
+				text-decoration: none;
+				background-image: 
+			repeating-linear-gradient(
+				-60deg,
+				 #ffcc1d,
+				 #ffcc1d 8px,
+				 #ffd851 8px,
+				 #ffd851 18px);
+			}
 		}
 	}
 	.search {
@@ -101,6 +111,7 @@ body {
 }
 
 .banner {
+	margin-bottom: 75px;
 	padding: 60px 0;
 	min-height: 375px;
 	background: url('../img/banner.jpg');
@@ -127,6 +138,7 @@ body {
 	font-size: 24px;
 	font-family: "GothamProRegular";
 	position: relative;
+	margin-bottom: 20px;
 	&:after {
 		display: block;
 		content: " ";
@@ -148,10 +160,34 @@ body {
 }
 
 .selection {
-	input {
+	margin-bottom: 75px;
+	select {		
 		outline: none;
 		width: 100%;
 		border: 2px solid #d2d7d9;
 		border-radius: 2px;
+		padding: 12px;
 	}
+	input {
+		width: 100%;
+		border: none;
+		background: #ffcc1d;
+		padding: 15px 0;
+		font-family: "GothamProBold";
+	}
+}
+
+.help {
+	.help__text {
+		font-family: "GothamProBold";
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+	margin-bottom: 75px;
+}
+
+.catalog1, .catalog2 {
+	margin-bottom: 75px;
 }
