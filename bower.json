@@ -1,0 +1,21 @@
+{
+  "name": "perfomans_test",
+  "authors": [
+    "Alexey Zavalin <lehazavalin95@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "normalize-css": "normalize.css#^5.0.0"
+  }
+}

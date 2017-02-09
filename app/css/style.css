@@ -1,0 +1,139 @@
+body {
+  font-family: "GothamProLight";
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menu .menu__item {
+  flex-grow: 1;
+  background: #ffcc1d;
+  text-align: center;
+  transition: .2s;
+}
+.menu .menu__item .item__link {
+  display: block;
+  padding: 22px 10px;
+  color: #000;
+  transition: .2s;
+}
+.menu .menu__item:hover {
+  background: #000;
+}
+.menu .menu__item:hover .item__link {
+  color: #fff;
+  text-decoration: none;
+}
+.header {
+  padding: 60px 0;
+}
+.header .desc {
+  padding-left: 30px;
+}
+.header .desc .desc__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "GothamProBold";
+}
+.header .desc .desc__text {
+  font-family: "GothamProLight";
+}
+.header .desc .header__menu {
+  display: flex;
+}
+.header .desc .header__menu .menu__item {
+  padding-right: 40px;
+}
+.header .desc .header__menu .menu__item .menu__link {
+  display: block;
+  border-bottom: 1px solid #d2d7d9;
+  color: #000;
+  transition: .2s;
+}
+.header .desc .header__menu .menu__item .menu__link:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+.header .phone {
+  margin-bottom: 18px;
+  text-align: right;
+}
+.header .phone a {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  font-family: "GothamProLight";
+}
+.header .button {
+  margin-bottom: 33px;
+  text-align: center;
+  border-bottom: 2px solid #ffad1d;
+  border-radius: 3px;
+  background-image: repeating-linear-gradient(-60deg, #ffcc1d, #ffcc1d 10px, #ffd851 10px, #ffd851 20px);
+}
+.header .button .button__link {
+  font-family: "GothamProBold";
+  color: #000;
+  display: block;
+  padding: 20px 23px;
+  font-size: 16px;
+}
+.header .search form input {
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  border: 1px solid #d2d7d9;
+  border-radius: 2px;
+}
+.banner {
+  padding: 60px 0;
+  min-height: 375px;
+  background: url('../img/banner.jpg');
+}
+.banner .banner__title {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "GothamProLight";
+}
+.banner .banner__list {
+  display: flex;
+  justify-content: space-around;
+}
+.banner .banner__list .banner__item {
+  color: #fff;
+  flex-grow: 1;
+  text-align: center;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "GothamProRegular";
+  position: relative;
+}
+.title:after {
+  display: block;
+  content: " ";
+  width: 65px;
+  border: 3px solid #ffcc1d;
+  border-radius: 3px;
+  position: absolute;
+  top: 39px;
+}
+.title:before {
+  display: block;
+  content: " ";
+  width: 110px;
+  border: 1px solid #ffcc1d;
+  position: absolute;
+  left: 64px;
+  top: 41px;
+}
+.selection input {
+  outline: none;
+  width: 100%;
+  border: 2px solid #d2d7d9;
+  border-radius: 2px;
+}
