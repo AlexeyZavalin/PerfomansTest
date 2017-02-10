@@ -10,7 +10,7 @@ body {
 		flex-grow: 1;		
 		background: #ffcc1d;
 		text-align: center;
-		transition: .2s;
+		transition: .3s;
 		.item__link {
 			display: block;
 			padding: 22px 10px;
@@ -27,7 +27,7 @@ body {
 	}
 }
 
-.header, .footer {
+.info {
 	padding: 60px 0;
 	.desc {
 		padding-left: 30px;
@@ -38,23 +38,7 @@ body {
 		}
 		.desc__text {
 			font-family: "GothamProLight";
-		}
-		.header__menu {
-			display: flex;
-			.menu__item {
-				padding-right: 40px;
-				.menu__link {
-					display: block;
-					border-bottom: 1px solid #d2d7d9;  
-					color: #000;
-					transition: .2s;
-					&:hover {
-						font-weight: bold;
-						text-decoration: none;
-					}
-				}
-			}
-		}
+		}		
 	}	
 	.phone {
 		margin-bottom: 18px;
@@ -72,12 +56,12 @@ body {
 		border-bottom: 2px solid #ffad1d;
 		border-radius: 3px;
 		background-image: 
-			repeating-linear-gradient(
-				-60deg,
-				 #ffcc1d,
-				 #ffcc1d 10px,
-				 #ffd851 10px,
-				 #ffd851 20px);
+		repeating-linear-gradient(
+			-60deg,
+			#ffcc1d,
+			#ffcc1d 10px,
+			#ffd851 10px,
+			#ffd851 20px);
 		//background-size: 20px;		
 		.button__link {
 			font-family: "GothamProBold";
@@ -88,17 +72,18 @@ body {
 			&:hover {
 				text-decoration: none;
 				background-image: 
-			repeating-linear-gradient(
-				-60deg,
-				 #ffcc1d,
-				 #ffcc1d 8px,
-				 #ffd851 8px,
-				 #ffd851 18px);
+				repeating-linear-gradient(
+					-60deg,
+					#ffcc1d,
+					#ffcc1d 8px,
+					#ffd851 8px,
+					#ffd851 18px);
 			}
 		}
 	}
 	.search {
 		form {
+			position: relative;
 			input {
 				width: 100%;
 				padding: 10px 15px;
@@ -106,12 +91,69 @@ body {
 				border: 1px solid #d2d7d9;
 				border-radius: 2px;
 			}
+			.magnifier {
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				svg {
+					fill: #dbdbdb;
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+	}
+	.info__menu {
+		display: flex;
+		.menu__item {
+			padding-right: 40px;
+			.menu__link {
+				display: block;
+				border-bottom: 1px solid #d2d7d9;  
+				color: #000;
+				transition: .2s;
+				&:hover {
+					font-weight: bold;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
 
-.banner {
+.block {
 	margin-bottom: 75px;
+	.title {
+		text-transform: uppercase;
+		font-size: 24px;
+		font-family: "GothamProRegular";
+		position: relative;
+		margin-bottom: 20px;
+		&:after {
+			display: block;
+			content: " ";
+			width: 65px;
+			border: 3px solid #ffcc1d;
+			border-radius: 3px;
+			position: absolute;
+			top: 39px;
+		}
+		&:before {
+			display: block;
+			content: " ";
+			width: 110px;
+			border: 1px solid #ffcc1d;
+			position: absolute;
+			left: 64px;
+			top: 41px;
+		}
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.banner {
 	padding: 60px 0;
 	min-height: 375px;
 	background: url('../img/banner.jpg');
@@ -133,34 +175,7 @@ body {
 	}
 }
 
-.title {
-	text-transform: uppercase;
-	font-size: 24px;
-	font-family: "GothamProRegular";
-	position: relative;
-	margin-bottom: 20px;
-	&:after {
-		display: block;
-		content: " ";
-		width: 65px;
-		border: 3px solid #ffcc1d;
-		border-radius: 3px;
-		position: absolute;
-		top: 39px;
-	}
-	&:before {
-		display: block;
-		content: " ";
-		width: 110px;
-		border: 1px solid #ffcc1d;
-		position: absolute;
-		left: 64px;
-		top: 41px;
-	}
-}
-
 .selection {
-	margin-bottom: 75px;
 	select {		
 		outline: none;
 		width: 100%;
@@ -174,20 +189,81 @@ body {
 		background: #ffcc1d;
 		padding: 15px 0;
 		font-family: "GothamProBold";
+		outline: none;
 	}
 }
 
 .help {
 	.help__text {
 		font-family: "GothamProBold";
+		margin-bottom: 25px;
 	}
 	img {
 		width: 100%;
 		height: auto;
 	}
-	margin-bottom: 75px;
+	input {
+		width: 100%;
+		outline: none;
+		padding: 10px;
+		border-radius: 3px;
+		border: 1px solid #d5dadc;
+		&[type="submit"] {
+			margin-top: 35px;
+			background: #ffcc1d;
+			font-family: "GothamProBold";
+		}
+	}
+	label {
+		color: #9b9b9b;
+	}
 }
 
-.catalog1, .catalog2 {
-	margin-bottom: 75px;
+.catalog {
+	.catalog__item {
+		&:hover {
+			text-decoration: none;
+		}
+		display: block;
+		position: relative;
+		margin-bottom: 30px;
+		text-align: center;		
+		&:after {
+			display: block;
+			content: " ";
+			width: 0;
+			height: 4px;
+			background: #ffcc1d;
+			position: absolute;
+			bottom: -15px;
+			transition: .6s;
+		}
+		&:before {
+			display: block;
+			content: " ";
+			width: 100%;
+			height: 4px;
+			background: #d2d7d9;
+			position: absolute;
+			bottom: -15px;			
+		}
+		&:hover {
+			&:after {
+				width: 100%;
+			}
+		}
+		.item__title {
+			font-size: 16px;
+			text-align: center;
+			font-family: "GothamProLight";
+			color: #000;	
+			text-decoration: none;		
+		}
+	}
+}
+
+.footer {
+	.info__menu {
+		margin-bottom: 45px;
+	}
 }
